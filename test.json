@@ -1,0 +1,21 @@
+{
+    "builders": [
+        {
+            "commit": "true",
+            "image": "ubuntu:provision",
+            "pull": false,
+            "type": "docker",
+            "volumes": {
+                "/home/rodnover/workspace/projects/aquatica/": "/var/www/aquatica"
+            }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "deployer",
+            "before_install": [
+                "apt-get install -y curl php5"
+            ]
+        }
+    ]
+}
