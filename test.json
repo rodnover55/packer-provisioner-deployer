@@ -15,7 +15,8 @@
             "type": "deployer",
             "before_install": [
                 "apt-get install -y curl php5"
-            ]
+            ],
+            "task": "my_task"
         }
     ]
 }
